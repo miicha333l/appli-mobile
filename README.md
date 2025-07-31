@@ -30,14 +30,14 @@ Application mobile web moderne, responsive et accessible, réalisée en HTML, CS
 - Ajout de commentaires dans le code pour la clarté
 
 ## Structure du projet
-
-- [css/](css/) : Feuilles de style CSS
-- [images/](images/) : Images utilisées dans l'application
-- [js/](js/) : Scripts JavaScript
-- [index.html](index.html) : Page principale
-- [README.md](README.md) : Documentation
+- 📁 [css/](css/) : Feuilles de style CSS
+- 🖼️ [images/](images/) : Images utilisées dans l'application
+- 📜 [js/](js/) : Scripts JavaScript
+- 📄 [index.html](index.html) : Page principale
+- 📘 [README.md](README.md) : Documentation
 
 ## Utilisation
+
 1. Placez vos images dans le dossier [`images/`](images/).
 2. Modifiez le contenu des articles dans [`index.html`](index.html).
 3. Personnalisez le menu burger et les interactions dans [`js/app.js`](js/app.js).
