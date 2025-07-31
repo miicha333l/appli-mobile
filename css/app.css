@@ -1,0 +1,261 @@
+/* =========================
+   Styles généraux
+   ========================= */
+:root {
+    --color-bg: #001E39;
+    --color-header: #00325E;
+    --color-accent: #004E92;
+    --color-btn1: #00BE42;
+    --color-btn2: #0075BE;
+    --color-search: #2997ab;
+    --color-white: #fff;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', Arial, sans-serif;
+    background: var(--color-bg);
+    color: var(--color-white);
+    margin: 0;
+}
+
+/* =========================
+   Header
+   ========================= */
+header {
+    background: var(--color-header);
+    border-bottom: 7px solid var(--color-accent);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+}
+header h1 {
+    text-align: center;
+    font-size: 2.2em;
+    margin: 0;
+    padding: 20px 0 10px 0;
+}
+.menu-btn {
+    background: none;
+    border: none;
+    color: var(--color-white);
+    font-size: 2em;
+    position: absolute;
+    top: 25px;
+    left: 10px;
+    cursor: pointer;
+}
+header span {
+    display: none;
+}
+
+/* =========================
+   Section catégorie
+   ========================= */
+.category {
+    padding-top: 80px;
+    min-height: 260px;
+    background: url('../images/category.jpg') center/cover no-repeat;
+}
+.category h2 {
+    font-size: 2em;
+    margin: 0;
+    text-align: center;
+    text-shadow: 0 0 10px black, 0 0 20px black;
+    padding-top: 30px;
+}
+#search-form {
+    text-align: center;
+    margin-top: 30px;
+}
+.visually-hidden {
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+#search-text {
+    font-size: 1.1em;
+    padding: 12px;
+    width: 60%;
+    border: none;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+#search {
+    font-size: 1.1em;
+    background: var(--color-search);
+    color: var(--color-white);
+    padding: 12px 20px;
+    border: none;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+    outline: none;
+}
+#search:focus {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px;
+    box-shadow: 0 0 0 4px rgba(0, 78, 146, 0.2);
+}
+#search:hover {
+    background: #217a8c;
+}
+
+/* =========================
+   Navigation
+   ========================= */
+nav {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: var(--color-header);
+}
+nav ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+}
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    width: 33%;
+    text-align: center;
+    padding: 20px 0;
+    box-sizing: border-box;
+    border-top: 7px solid var(--color-accent);
+    border-right: 2px solid var(--color-bg);
+}
+nav ul li:last-child {
+    border-right: none;
+}
+nav ul li a span {
+    color: var(--color-white);
+    transition: color 0.3s;
+}
+nav ul li a:focus span {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px;
+    color: var(--color-btn2);
+}
+
+/* =========================
+   Main
+   ========================= */
+main {
+    padding: 100px 10px 90px 10px;
+}
+main h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+.row {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    min-height: 80px;
+    margin-bottom: 18px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    padding-bottom: 10px;
+}
+.row img {
+    height: 60px;
+    width: 60px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.row p {
+    font-size: 1em;
+    margin: 0;
+}
+#points {
+    text-align: center;
+    margin: 0;
+    font-size: 1.2em;
+}
+#button-1, #button-2 {
+    margin-top: 30px;
+    padding: 14px;
+    width: 100%;
+    font-size: 1em;
+    color: var(--color-white);
+    border: none;
+    border-radius: 100px;
+    font-weight: bold;
+    text-transform: uppercase;
+    box-shadow: 0 3px 2px black;
+    cursor: pointer;
+    transition: background 0.3s, box-shadow 0.3s;
+    outline: none;
+}
+#button-1:focus, #button-2:focus {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px;
+    box-shadow: 0 0 0 4px rgba(0, 78, 146, 0.2);
+}
+#button-1 {
+    background: var(--color-btn1);
+}
+#button-1:hover {
+    background: #009e36;
+    box-shadow: 0 6px 6px rgba(0,0,0,0.2);
+}
+#button-2 {
+    background: var(--color-btn2);
+}
+#button-2:hover {
+    background: #005a8c;
+    box-shadow: 0 6px 6px rgba(0,0,0,0.2);
+}
+
+/* =========================
+   Responsive Design
+   ========================= */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 1em;
+        padding: 10px 0 5px 0;
+    }
+    .category {
+        padding-top: 50px;
+        min-height: 120px;
+    }
+    .category h2 {
+        font-size: 1em;
+        padding-top: 10px;
+    }
+    main {
+        padding: 60px 5px 60px 5px;
+    }
+    .row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+        min-height: 40px;
+        margin-bottom: 8px;
+        padding-bottom: 4px;
+    }
+    .row img {
+        height: 30px;
+        width: 30px;
+    }
+    .row p {
+        font-size: 0.95em;
+    }
+    #button-1, #button-2 {
+        font-size: 0.95em;
+        padding: 6px;
+    }
+    nav ul li {
+        padding: 8px 0;
+    }
+}

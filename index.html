@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application mobile</title>
+    <link rel="stylesheet" type="text/css" href="css/app.css">
+    <!-- FontAwesome pour les icônes -->
+    <script src="https://kit.fontawesome.com/53bc284c70.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- Barre de navigation principale -->
+    <header>
+        <button aria-label="Menu" class="menu-btn">
+            <span class="fa fa-bars"></span>
+        </button>
+        <h1>Application mobile</h1>
+    </header>
+
+    <!-- Section catégorie -->
+    <section class="category">
+        <h2><span class="fa fa-code"></span> Informatique</h2>
+        <form id="search-form" role="search" aria-label="Recherche d'idées">
+            <label for="search-text" class="visually-hidden">Rechercher une idée</label>
+            <input type="text" id="search-text" placeholder="Rechercher une idée...">
+            <button id="search" type="submit" aria-label="Rechercher">
+                <span class="fa fa-search"></span>
+            </button>
+        </form>
+    </section>
+
+    <!-- Contenu principal -->
+    <main>
+        <h2>Derniers articles</h2>
+        <div class="row">
+            <img src="images/category.jpg" alt="Catégorie Informatique">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua...</p>
+        </div>
+        <div class="row">
+            <img src="images/category.jpg" alt="Catégorie Informatique">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua...</p>
+        </div>
+        <div class="row">
+            <img src="images/category.jpg" alt="Catégorie Informatique">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua...</p>
+        </div>
+        <h2 id="points">...</h2>
+        <button id="button-1">S'inscrire</button>
+        <button id="button-2">Se connecter</button>
+    </main>
+
+    <!-- Navigation en bas de page -->
+    <nav aria-label="Navigation principale">
+        <ul>
+            <li><a href="#" aria-label="Accueil"><span class="fa fa-th fa-3x"></span></a></li>
+            <li><a href="#" aria-label="Recherche"><span class="fa fa-search fa-3x"></span></a></li>
+            <li><a href="#" aria-label="Profil"><span class="fa fa-user fa-3x"></span></a></li>
+        </ul>
+    </nav>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
